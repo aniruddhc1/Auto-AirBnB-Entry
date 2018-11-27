@@ -27,7 +27,7 @@ foreach($config['locations'] as $location) {
       $details = reservation_details($event);
 
       if($details['phone']) {
-        $code = substr($details['phone'], -4);
+        $code = substr($details['phone'], -6);
         $index = $location['code_index_'.$codeindex];
         $codeindex++;
         $result = set_door_code($location, $code, $index);
